@@ -82,9 +82,9 @@ function createTodoItemHTML(itemData, itemIndex) {
   //prettier-ignore
   return `
     <li class="todo-item">
-      <div class="todo-text ${isDone ? "completed" : ""}">
+      <div class="custom-checkbox check">
         <input type="checkbox" id="item-${itemIndex}" ${isDone ? "checked" : ""} />
-        <label for="item-${itemIndex}">${title}</label>
+        <label for="item-${itemIndex}" id="item">${title}</label>
       </div>
       <div class="todo-info">
         <div class="todo-info-row">

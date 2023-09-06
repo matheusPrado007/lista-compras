@@ -182,7 +182,7 @@ input {
 .price {
   border-radius: 1.8vw;
   background-color: #fffcfcdc;
-  font-size: 75%;
+  font-size: 100%;
   width: 100%;
   margin: 2px;
 
@@ -219,6 +219,8 @@ input {
   flex-direction: column;
   align-items: flex-start;
   padding: 10px;
+  border-radius: 5%;
+  border: #62ff00 solid 2px;
 }
 
 .todo-text label {
@@ -240,4 +242,38 @@ input {
 .todo-list-controls {
   display: flex;
   gap: 5px;
+}
+/* Estilização do checkbox personalizado com alinhamento à esquerda */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox label {
+  display: flex;
+  align-items: center; /* Alinha verticalmente o texto e o novo checkbox */
+  cursor: pointer;
+  width: 100%;
+}
+
+.custom-checkbox input[type="checkbox"] + label::before {
+  content: "";
+  margin-right: 10px;
+  width: 20px;
+  height: 20px; 
+  border-radius: 8px; /* Cor da borda do novo checkbox */
+  background-color: #fff; /* Cor de fundo do novo checkbox */
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label::before {
+  background-color: #95ff00; /* Cor de fundo quando o checkbox está marcado */
+}
+
+.check {
+  width: 95%;
+  padding: 2px;
+}
+
+#item {
+  background-color: #00d9ff81;
+  border-radius: 8px;
 }
