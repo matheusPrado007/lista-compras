@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+  <script src="https://kit.fontawesome.com/7872dcc455.js" defer></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@700&display=swap"
+    rel="stylesheet" />
+  <title>Lista de compras Familia Prado</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="todo-title">
+      <h1 class="title"><i class="fas fa-check"></i>Lista de compras</h1>
+      <p class="subtitle">Lista de compras familia Prado</p>
+    </header>
+    <section class="todo-form">
+      <form id="addTodoForm">
+        <label for="todoTitle">Lista de compras:</label>
+        <div class="input-group">
+          <input type="text" id="todoTitle" placeholder="Acrescente um item" autocomplete="off" />
+          <button type="submit" class="btn btn-add">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <br>
+        <button type="submit" class="soma btn-calculate">
+          Soma total
+        </button>
+        <span id="somaTotalResult">Soma Total: R$ 0.00</span>
+
+      </form>
+    </section>
+    <main class="todo-list">
+      <ul id="todoList"></ul>
+    </main>
+  </div>
+  <script src="https://kit.fontawesome.com/7872dcc455.js" defer></script>
+</body>
+
+</html>
