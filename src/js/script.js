@@ -81,13 +81,21 @@ function createTodoItemHTML(itemData, itemIndex) {
   const quantity = storedQuantity !== null ? storedQuantity : '';
   //prettier-ignore
   return `
-    <li>
-      <span class="todo-text ${isDone ? "completed" : ""}">
-        <input type="checkbox" id="item-${itemIndex}" ${isDone ? "checked" : ""} />${title}</span>
+    <li class="todo-item">
+      <div class="todo-text ${isDone ? "completed" : ""}">
+        <input type="checkbox" id="item-${itemIndex}" ${isDone ? "checked" : ""} />
+        <label for="item-${itemIndex}">${title}</label>
+      </div>
       <div class="todo-info">
-        <input type="number" id="price-${itemIndex}" class="todo-price price" placeholder="Preço" value="${price}" />
-        <input type="number" id="quantity-${itemIndex}" class="todo-quantity price" placeholder="Quantidade" value="${quantity}" />
-        <button type="button" id="calculate_item-${itemIndex}" class=" btn-calculate">Calcular</button>
+        <div class="todo-info-row">
+          <label for="price-${itemIndex}">Preço:</label>
+          <input type="number" id="price-${itemIndex}" class="todo-price price" placeholder="Preço" value="${price}" />
+        </div>
+        <div class="todo-info-row">
+          <label for="quantity-${itemIndex}">Quantidade:</label>
+          <input type="number" id="quantity-${itemIndex}" class="todo-quantity price" placeholder="Quantidade" value="${quantity}" />
+        </div>
+        <button type="button" id="calculate_item-${itemIndex}" class="btn-calculate">Calcular</button>
         <span class="result" id="result-${itemIndex}">R$ </span>
       </div>
       <div class="todo-list-controls">
