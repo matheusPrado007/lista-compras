@@ -69,6 +69,16 @@ function handleCompleteTodo(event) {
   renderTodoList();
 }
 
+document.addEventListener("input", (event) => {
+  const inputId = event.target.id;
+  if (inputId.startsWith("price-") || inputId.startsWith("quantity-")) {
+    const itemIndex = inputId.split("-")[1];
+    const inputValue = event.target.value;
+    localStorage.setItem(inputId, inputValue);
+  }
+});
+
+
 // HTML construction funciton ----------------
 
 function createTodoItemHTML(itemData, itemIndex) {
@@ -132,6 +142,16 @@ function renderTodoList() {
   todoListOutput.innerHTML = todoListHTML.join("");
 
   allTodoList.forEach((_, i) => {
+    const priceInput = document.getElementById(`price-${i}`);
+    const quantityInput = document.getElementById(`quantity-${i}`);
+    
+    // Recuperar os valores do Local Storage
+    const storedPrice = localStorage.getItem(`price-${i}`);
+    const storedQuantity = localStorage.getItem(`quantity-${i}`);
+    
+    // Definir os valores nos inputs
+    priceInput.value = storedPrice !== null ? storedPrice : '';
+    quantityInput.value = storedQuantity !== null ? storedQuantity : '';
     const checkbox = document.getElementById(`item-${i}`);
     const deleteButton = document.getElementById(`del_item-${i}`);
     const updateButton = document.getElementById(`update_item-${i}`);
