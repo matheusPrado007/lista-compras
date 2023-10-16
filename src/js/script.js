@@ -51,7 +51,7 @@ function handleUpdateTodo(todoTitle) {
 }
 
 function handleDeleteTodo(event) {
-  let confirmDelete = confirm("Você tem certeza que quer deletar a tarefa?");
+  let confirmDelete = confirm("Você tem certeza que quer deletar esse item?");
   if (confirmDelete) {
     const itemIndexToDelete = Number(event.currentTarget.id.split("-")[1]);
     allTodoList = allTodoList.filter((_, i) => i !== itemIndexToDelete);
@@ -132,7 +132,7 @@ function renderTodoList() {
   if (allTodoList.length === 0) {
     removeTodoListFromLocalStorage();
     return (todoListOutput.innerHTML =
-      "<p class='info-message'>Nenhuma tarefa cadastrada.<p>");
+      "<p class='info-message'>Nenhum item cadastrado.<p>");
   }
 
   let todoListHTML = allTodoList.map((item, i) => {
