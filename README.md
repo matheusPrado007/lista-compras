@@ -18,7 +18,7 @@ Criei esta aplicação para solucionar um problema pessoal relacionado a lista d
 
 ## Como Usar
 
-Acesse a aplicação diretamente no seguinte link: [Lista de Compras - Prado Shop](https://prado-shop.netlify.app/).
+Acesse a aplicação diretamente no seguinte link: [Lista de Compras - Prado Shop](https://prado-list.netlify.app/).
 
 ## Contribuição
 
